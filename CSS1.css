@@ -1,0 +1,42 @@
+p {
+    font-size: 15px;
+    text-indent: 25px;
+    border: 1px solid powderblue;
+    margin: 50px;
+} 
+
+p.ordinary
+{
+    font-size: 20px;
+    text-indent: 25px;
+    border: 3px solid red;
+}
+
+h1
+{
+    text-align: center;
+}
+
+h2
+{
+    text-align: center;
+}
+
+h3
+{
+    text-align: center;
+}
+
+div
+{
+    position: static;
+    text-align: center;
+}
+
+img
+{
+    height: 50%;
+    width: 50%;
+    border-radius: 16px;
+    filter: drop-shadow(0 0 5px blue);
+}
