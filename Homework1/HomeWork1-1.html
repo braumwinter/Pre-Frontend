@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Моя первая страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <style>
+        .BG-color
+        {
+            background-color:ghostwhite;
+        }
+        .TextCenter
+        {
+            text-align: center;
+        }
+        .TextRedColor
+        {
+            color: red;
+        }
+        .Tips
+        {
+            font-weight: 100;
+            color: rgba(0, 0, 0, 0.5);
+            text-decoration-line: overline;
+
+        }
+        .Foreword
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: larger;
+        }
+        .FirstParagraph
+        {
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+            font-size: 150%;
+            font-variant: small-caps;
+            color: blue;
+        }
+        .SecondParagraph
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1em;
+            color: chartreuse;
+        }
+        .ThirdParagraph
+        {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            color: darkslategray;
+        }
+        .MySpan
+        {
+            font-style: italic;
+            text-decoration-line: underline;
+            font-weight: bolder;
+        }
+        .UlStyle1
+        {
+            list-style-type: disc;
+        }
+       .UlStyle2
+        {
+            list-style-type: none;
+            text-indent: -1em;
+        }
+        .UlStyle2::before
+        {
+            content: "§";
+            padding-right: 5px;
+        }
+        .UlStyle3
+        {
+            list-style-type: none;
+            text-indent: -1em;
+        }
+        .UlStyle3::before
+        {
+            content: "o";
+            padding-right: 5px;
+        }
+        .UlStyle4 
+        {
+        list-style: none;
+       text-indent: -1em;
+        }
+        .UlStyle4::before 
+        {
+        content: '\25ba';
+        padding-right: 5px;
+        color: red;
+        }
+    </style>
+
+</head>
+
+<body class="BG-color">
+
+    <h1 class="TextCenter">Я, <a href = "HomeWork1-2.html">Козырева Екатерина Сергеевна</a>, изучаю 
+        <span class = "TextRedColor">HTML</span>, CSS и JS</h1>
+    <br><br>
+
+    <h2>5 вещей, о которых нужно помнить, проектируя продукт для разработчиков</h2>
+    <br>
+    
+    <div class="Foreword">
+        <h3 class="Tips">(Введение)</h3>
+       Издание The Next Web 
+        <a href = "https://thenextweb.com/contributors/2018/06/16/5-things-to-keep-in-mind-when-designing-a-product-for-developers/"> 
+        приводит </a> несколько советов, которые помогут дизайнерам понять разработчиков и создать для них более качественный продукт. 
+        Сайт <a href = "https://dev.by/news/5-veschey-o-kotoryh-nuzhno-pomnit-proektiruya-produkt-dlya-razrabotchikov">DEV.BY</a>
+        опубликовал перевод материала
+    </div>
+    <br>
+
+    <div class="FirstParagraph">
+        <h3 class="Tips">(Первый абзац)</h3>
+        Психологи делят людей на две группы: <em>тех, у кого доминирует левое полушарие мозга, отвечающее за логику и аналитические навыки, 
+        или правое полушарие, которое ответственно за чувства, интуицию и творческое мышление</em>. Сегодня в ИТ-сообществе с этими двумя 
+        группами соотносятся <strong>разработчики и дизайнеры</strong>.
+    </div>
+    <br>
+
+    <div class="SecondParagraph">
+        <h3 class="Tips">(Второй абзац)</h3>
+        <span style ="color: darksalmon;">Это деление достаточно условно</span>. Дизайнеры нередко подкрепляют свои графические решения 
+        фактическими данными и статистикой, анализируют сложные сценарии пользовательского поведения и иногда даже код. Разработчикам 
+        тоже приходится проявлять <span style="background-color:aquamarine; color: black;">креативность, экспериментировать 
+        с различными решениями и искать наиболее удобные для пользователя</span>. Обычно они также неплохо 
+        разбираются в инструментах дизайна.
+    </div>
+    <br>
+
+    <div class="ThirdParagraph">
+        <h3 class="Tips">(Третий абзац)</h3>
+        Сотрудничество между дизайнерами и разработчиками иногда складывается непросто, но и те, и другие работают на одну и ту же цель: 
+        <span class="MySpan">создать продукт, который наилучшим образом удовлетворяет потребности пользователя, привлекателен и функционирует 
+        без сбоев</span>. Но вдвойне сложно им становится взаимодействовать, если этот продукт предназначен для разработчиков. Вот пять 
+        советов, которые в этом случае следует учесть.
+    </div>
+    <br>
+
+    <h2>Вот пять советов, которые в этом случае следует учесть:</h2>
+    <ol>
+        <li>Действительно знать своего пользователя</li>
+        <ul class="UlStyle1";>
+            <li>
+                полагаться только на мнение своих коллег при определении целевого потребителя ошибочно
+            </li>
+            <li>
+                создаваемый инструмент должен придать пользователю уверенность и в то же время помочь 
+                ему быстро и просто найти ответы
+            </li>
+        </ul>
+
+        <li>
+            Разработка ПО как религия
+        </li>
+        <ul>
+            <li class="UlStyle2";>
+                разработчики всецело преданны своим фреймворкам, привычным инструментам, и непоколебимо 
+                убеждены в никчёмности всего прочего
+            </li>
+            <li class="UlStyle2";>
+                но держаться в рамках условных правил также значит ограничивать собственный творческий порыв
+            </li>
+            <li class="UlStyle2";>
+                важно найти правильный баланс между проверенными проектными решениями и свежими элементами UI — 
+                для этого необязательно переворачивать с ног на голову мир пользователя
+            </li>
+        </ul>
+
+        <li>
+            Разработчики тоже люди
+        </li>
+        <ul>
+            <li class="UlStyle3";>
+                пользовательский интерфейс должен быть как можно более удобным и интуитивным
+            </li>
+            <li class="UlStyle3";>
+                если разработчикам что-то непонятно, они, скорее всего, не будут утруждаться
+            </li>
+        </ul>
+
+        <li>
+            Чем меньше, тем лучше
+        </li>
+        <ul>
+            <li class="UlStyle4";>
+                пользователю не будет никакой пользы от неработающего, хоть и симпатичного приложения
+            </li>
+            <li class="UlStyle4";>
+                по достоинству оценить все прелести интерфейса можно только в том случае, если продукт 
+                надёжен, удобен и стабильно функционирует
+            </li>
+        </ul>
+
+        <li>
+            Не нужно бояться просить помощи
+        </li>
+        <ul>
+           <li>
+            дизайнерам редко известны технические моменты и терминология настолько хорошо, как разработчикам
+           </li>
+           <li>
+            главное, не забывать, что любой продукт создаётся для людей
+           </li>
+        </ul>
+    </ol>
+    <br>
+    <br>
+
+    <a href = "https://techrocks.ru/2018/08/23/5-things-to-think-about-when-designing-a-product-for-developers/"> Информация взята отсюда </a>
+</body>
+</html>
