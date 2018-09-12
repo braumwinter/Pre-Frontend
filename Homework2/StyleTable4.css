@@ -1,0 +1,106 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(245, 253, 175);
+}
+
+div.wrapper {
+    z-index: 1;
+    position: relative;
+    min-height: 100%;
+}
+
+div.header,
+div.footer {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    background-color: aquamarine;
+    opacity: 0.5;
+}
+
+div.header {
+    display: inline-block;
+    height: 10%;
+    top: 0%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+div.header:hover {
+    background-color: aqua;
+}
+
+div.footer {
+    height: 15%;
+    bottom: 0%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div.footer:hover {
+    background-color: rgba(127, 255, 212, 1.0);
+    opacity: 1.0;
+}
+
+h2 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    size: 8px;
+    margin-left: 20%;
+}
+
+h2.header {
+    margin-top: 0%;
+}
+
+h2.footer {
+    margin-left: 30%;
+    margin-bottom: 0%;
+}
+
+img {
+    display: inline-block;
+    position: relative;
+    height: 80%;
+    top: 10%;
+}
+
+img.first {
+    left: 5px;
+    float: left;
+}
+
+img.second {
+    right: 5px;
+    float: right;
+}
+
+div.content {
+    z-index: 2;
+    display: inline-block;
+    position: relative;
+    background-color: rgb(245, 253, 175);
+    width: 99%;
+    margin-top: 7%;
+    margin-bottom: 50px;
+    margin-left: 0.3%;
+    border-left: 1%;
+    border-left-color: blueviolet;
+    border-left-style: solid;
+    border-right: 1%;
+    border-right-color: blueviolet;
+    border-right-style: solid;
+}
+
+table {
+    z-index: 2;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    left: 1%;
+}

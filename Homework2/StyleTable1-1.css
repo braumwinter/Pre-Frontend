@@ -1,0 +1,43 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    border: 5px;
+    border-collapse: separate;
+    border-spacing: 15px;
+
+}
+
+table.first {
+    height: 50%;
+}
+
+table.second {
+    height: 30%;
+}
+
+table.third {
+    height: 20%;
+}
+
+td.first {
+    background-color: orangered;
+}
+
+td.second {
+    background-color: yellow;
+}
+
+td.third {
+    background-color: aqua;
+}
+
+td.fourth {
+    background-color: darkslategrey;
+}

@@ -1,0 +1,92 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-indent: 10px;
+    text-align: justify;
+}
+
+p::first-letter {
+    font-size: larger;
+    font-style: italic;
+    color: red;
+}
+
+div.wrapper {
+    z-index: 1;
+    position: relative;
+    margin: 0px auto;
+    min-height: 100%;
+}
+
+div.header {
+    z-index: 3;
+    position: fixed;
+    width: 90%;
+    height: 15%;
+    left: 10%;
+    background-color: aqua;
+    border-radius: 0px 0px 20px 20px;
+}
+
+div.menu {
+    z-index: 3;
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    bottom: 0%;
+    background-color: aqua;
+    opacity: 0.4;
+}
+
+div.footer {
+    z-index: 3;
+    position: fixed;
+    width: 90%;
+    height: 15%;
+    background-color: aqua;
+    left: 10%;
+    bottom: 0%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div.content {
+    z-index: 2;
+    display: table;
+    position: absolute;
+    overflow: auto;
+    width: 85%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-left: 11%;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    top: 5%;
+}
+
+p.menu {
+    z-index: 3;
+    position: relative;
+    top: 40%;
+    bottom: 40%;
+    border: 5px;
+    border-color: blue;
+    border-radius: 30%;
+    border-style: groove;
+    text-align: center;
+}
+
+p.footer {
+    z-index: 3;
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+}
