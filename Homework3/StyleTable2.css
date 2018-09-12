@@ -1,0 +1,235 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    color: white;
+}
+
+div {
+    display: table;
+    position: static;
+    margin: 1%;
+    float: left;
+}
+
+.top1,
+.top2 {
+    height: 16%;
+}
+
+.top1 {
+    width: 33%;
+    background-color: red;
+}
+
+.top2 {
+    width: 63%;
+    background-color: orangered;
+}
+
+.content {
+    display: table;
+    position: static;
+    width: 98%;
+    height: 52%;
+    margin: 1%;
+    background-color: green;
+}
+
+.footer1,
+.footer2,
+.footer3 {
+    position: relative;
+    bottom: 0;
+    height: 18%;
+    width: 31.3%;
+}
+
+.footer1 {
+    background-color: goldenrod;
+}
+
+.footer2 {
+    background-color: blue;
+}
+
+.footer3 {
+    background-color: blueviolet;
+}
+
+@media only screen and (max-width: 375px) {
+
+    html,
+    body {
+        width: 100%;
+        display: table;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+
+    div {
+        margin: 0%;
+    }
+
+    .content,
+    .top1,
+    .top2,
+    .footer1,
+    .footer2,
+    .footer3 {
+        position: relative;
+        display: block;
+        height: 120px;
+        width: 100%;
+        margin: 0%;
+        border-top: 10px;
+        border-bottom: 10px;
+        border-left: 0px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: white;
+
+        overflow-y: auto;
+    }
+
+    .content {
+        margin-top: -218%;
+    }
+
+    .footer3 {
+        margin-top: -256%;
+    }
+
+    .top1 {
+        margin-top: 74%;
+        height: 380px;
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+
+    html,
+    body {
+        width: 100%;
+        display: table;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+
+    div {
+        margin: 0%;
+    }
+
+    .content,
+    .top1,
+    .top2,
+    .footer1,
+    .footer2,
+    .footer3 {
+        position: relative;
+        display: block;
+        height: 120px;
+        width: 100%;
+        margin: 0%;
+        border-top: 10px;
+        border-bottom: 10px;
+        border-left: 0px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: white;
+
+        overflow-y: auto;
+    }
+
+    .content {
+        margin-top: -207%;
+    }
+
+    .footer3 {
+        margin-top: -240%;
+    }
+
+    .top1 {
+        margin-top: 74%;
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        display: table;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+
+    div {
+        margin: 1%;
+    }
+
+    .content,
+    .top1,
+    .top2,
+    .footer1,
+    .footer2,
+    .footer3 {
+        position: relative;
+        display: block;
+        overflow-y: auto;
+    }
+
+    .top2,
+    .footer3 {
+        height: 150px;
+    }
+
+    .top1,
+    .footer1 {
+        width: 98%;
+        height: 350px;
+    }
+
+    .content,
+    .footer2 {
+        width: 48%;
+        height: 240px;
+    }
+
+    .top2 {
+        width: 38%;
+        margin-top: -525px;
+    }
+
+    .footer3 {
+        width: 58%;
+        margin-top: -1156px;
+        margin-left: 41%;
+
+    }
+
+    .top1 {
+        margin-top: 180px;
+    }
+
+    .footer2 {
+        margin-top: -621px;
+        margin-left: 51%;
+    }
+}
