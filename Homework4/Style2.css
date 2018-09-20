@@ -1,0 +1,209 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.conteiner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+p {
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    color: white;
+}
+
+div {
+    display: flex;
+}
+
+.top1,
+.top2 {
+    height: 16%;
+}
+
+.top1 {
+    width: 33%;
+    background-color: red;
+}
+
+.top2 {
+    width: 63%;
+    background-color: orangered;
+}
+
+.content {
+    width: 98%;
+    height: 50%;
+    background-color: green;
+}
+
+.footer1,
+.footer2,
+.footer3 {
+    height: 18%;
+    width: 31.3%;
+}
+
+.footer1 {
+    background-color: goldenrod;
+}
+
+.footer2 {
+    background-color: blue;
+}
+
+.footer3 {
+    background-color: blueviolet;
+}
+
+/*---------------------------------iphone--------------------------------------*/
+
+@media only screen and (max-width: 414px) {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .conteiner {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div {
+        display: flex;
+        margin: 0%;
+    }
+
+    .content,
+    .top1,
+    .top2,
+    .footer1,
+    .footer2,
+    .footer3 {
+
+        height: 23%;
+        width: 90%;
+        border-top: 10px;
+        border-bottom: 10px;
+        border-left: 0px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: white;
+
+        overflow-y: auto;
+    }
+
+    .content {
+        order: -3;
+    }
+
+    .footer3 {
+        order: -2;
+    }
+
+    .top1 {
+        order: -1;
+        height: 46%;
+    }
+}
+
+/*----------------------------------ipad---------------------------------------*/
+
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .conteiner {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div {
+        display: flex;
+        margin: 0%;
+    }
+
+    .content,
+    .top1,
+    .top2,
+    .footer1,
+    .footer2,
+    .footer3 {
+        border-top: 10px;
+        border-bottom: 10px;
+        border-left: 0px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: white;
+
+        overflow-y: auto;
+    }
+
+    .top2,
+    .footer3 {
+        height: 10%;
+    }
+
+    .top1,
+    .footer1 {
+        width: 98%;
+        height: 50%;
+    }
+
+    .content,
+    .footer2 {
+        width: 48%;
+        height: 38%;
+    }
+
+    .top2 {
+        order: -10;
+        width: 38%;
+    }
+
+    .footer3 {
+        width: 58%;
+        order: -9;
+
+    }
+
+    .top1 {
+        order: -8;
+    }
+
+    .content {
+        order: -7;
+    }
+
+    .footer2 {
+        order: -6;
+
+    }
+}

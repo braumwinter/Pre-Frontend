@@ -1,0 +1,35 @@
+.conteiner {
+    display: flex;
+    height: 200px;
+    width: 100%;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box1,
+.box2,
+.box3 {
+    margin: 1%;
+    height: 40%;
+}
+
+.colorbox1 {
+    background-color: green;
+}
+
+.colorbox2 {
+    background-color: yellow;
+}
+
+.box1 {
+    width: 8%;
+}
+
+.box2 {
+    width: 18%;
+}
+
+.box3 {
+    width: 98%;
+}

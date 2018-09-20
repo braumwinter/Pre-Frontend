@@ -1,0 +1,219 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.conteiner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*---------Header---------*/
+
+div.header {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(218, 209, 209);
+
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.logo {
+    width: 40%;
+    height: 100%;
+
+    background-color: rgb(155, 192, 192);
+
+    justify-content: center;
+    align-content: center;
+}
+
+div.menuheader {
+    width: 100%;
+    height: 8%;
+    justify-content: space-around;
+    align-content: center;
+}
+
+div.item {
+    width: 10%;
+    height: 60%;
+
+    background-color: rgb(155, 192, 192);
+    justify-content: center;
+    align-content: center;
+}
+
+p.item {
+    font-weight: bold;
+}
+
+
+/*---------Content---------*/
+
+div.main {
+    width: 100%;
+    height: 70%;
+
+    background-color: rgb(218, 209, 209);
+}
+
+div.menu {
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding-top: 1%;
+}
+
+div.menubar {
+    width: 100%;
+    height: 8%;
+    background-color: rgb(155, 192, 192);
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    justify-content: flex-start;
+    align-content: center;
+}
+
+div.content {
+    width: 80%;
+    height: 100%;
+
+    justify-content: space-between;
+
+    align-items: stretch;
+    align-content: stretch;
+}
+
+div.foto {
+    width: 30%;
+    height: 45%;
+    margin: 1%;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+p.foto {
+    font-size: 100%;
+}
+
+
+/*---------Footer---------*/
+
+div.footer {
+    width: 100%;
+    height: 12%;
+
+    background-color: rgb(155, 192, 192);
+
+    justify-content: center;
+    align-content: center;
+}
+
+p.footer {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px) {
+    div.foto {
+        width: 45%;
+        height: 30%;
+        margin: 1%;
+    }
+
+    div.item {
+        width: 15%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    html,
+    body {
+        height: 150%;
+        width: 100%;
+    }
+
+    div.conteiner {
+        height: 150%;
+        width: 100%;
+    }
+
+    div.header {
+        width: 100%;
+        height: 3%;
+    }
+
+    div.menuheader {
+        height: 2%;
+    }
+
+    div.item {
+        width: 10%;
+        height: 60%;
+    }
+
+    p.item {
+        font-size: 80%;
+    }
+
+    div.main {
+        width: 100%;
+        height: 92%;
+    }
+
+    div.menu {
+        width: 20%;
+        height: 100%;
+    }
+
+    div.menubar {
+        width: 100%;
+        height: 1.5%;
+    }
+
+    div.content {
+        width: 80%;
+        height: 100%;
+    }
+
+    div.foto {
+        width: 70%;
+        height: 15%;
+    }
+
+    img {
+        width: 100%;
+        height: 80%;
+    }
+
+    div.footer {
+
+        height: 3%;
+    }
+
+}

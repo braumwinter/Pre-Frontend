@@ -1,0 +1,30 @@
+.conteiner {
+    display: flex;
+    height: 300px;
+    width: 300px;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box1,
+.box2,
+.box3 {
+    background-color: aqua;
+    margin: 1%;
+    height: 30%;
+    width: 30%;
+}
+
+.box1 {
+    align-items: flex-start;
+}
+
+.box2 {
+    align-items: flex-start;
+    height: 60%;
+}
+
+.box3 {
+    align-items: flex-end;
+}

@@ -1,0 +1,27 @@
+.conteiner {
+    display: flex;
+    height: 200px;
+    width: 100%;
+
+    justify-content: space-around;
+}
+
+.box1,
+.box2,
+.box3 {
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+}
+
+.box1 {
+    align-self: flex-start;
+}
+
+.box2 {
+    align-self: center;
+}
+
+.box3 {
+    align-self: flex-end;
+}
