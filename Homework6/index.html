@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="source.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="divImg">
+            <img src="myImg.jpg" alt="foto" class="grow">
+        </div>
+
+        <div id="content">
+
+            <p>
+                <form>
+
+                    <div>
+                        <label>имя</label>
+                        <input class="inputText" type="text" name="name" id="name" spellcheck="true" placeholder="введите имя"
+                            required>
+                    </div>
+
+                    <div>
+                        <label>пол</label>
+
+                        <input type="radio" name="sex" id="sex" value="m">мужской
+
+                        <input type="radio" name="sex" id="sex" value="f">женский
+
+                    </div>
+
+                    <div>
+                        <label>email</label>
+                        <input class="inputText" type="email" name="email" id="email" spellcheck="true" placeholder="введите Email"
+                            required>
+                    </div>
+
+                    <div>
+                        <label>телефон</label>
+                        <input class="inputText" type="tel" name="phone" id="phone" spellcheck="true" placeholder="введите номер телефона без пробелов и других знаков"
+                            required>
+                    </div>
+
+                    <div>
+                        <label>из соседней комнаты донесся подозрительный шорох. Ваши действия?</label>
+                        <select class="inputText" name="country">
+                            <option>ничего не делать. шорох и шорог, что такого</option>
+                            <option>пойду проверю, может, что-то упало</option>
+                            <option>молча начну писать испуганные смс близким</option>
+                            <option>брошусь туда пулей</option>
+                            <option>брошусь пулей из дома</option>
+                            <option>зашуршу в ответ</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" name="terms" id="checkbox" required>
+                            Ok?
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="butt" onclick="CheckForm()">
+                            жмяк
+                        </button>
+                    </div>
+
+                </form>
+
+        </div>
+
+        <div id="bar" class="slide">
+
+            <div class="buttons" id="1" onclick="PressButton('1')" ;>
+                <div class="littleBut">
+                    Великий<br>обман<br>1</div>
+            </div>
+            <div class="buttons" id="2" onclick="PressButton('2')" ;>
+                <div class="littleBut">
+                    Великий<br>обман<br>2</div>
+            </div>
+            <div class="buttons" id="3" onclick="PressButton('3')" ;>
+                <div class="littleBut">
+                    Великий<br>обман<br>3</div>
+            </div>
+            <div class="buttons" id="4" onclick="PressButton('4')" ;>
+                <div class="littleBut">
+                    Великий<br>обман<br>4</div>
+            </div>
+            <div class="buttons" id="5" onclick="PressButton('5')" ;>
+                <div class="littleBut">
+                    Великий<br>обман<br>5</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

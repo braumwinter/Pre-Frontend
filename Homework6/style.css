@@ -1,0 +1,188 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+    z-index: 1;
+}
+
+#divImg {
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+img {
+    height: 50%;
+}
+
+.grow:hover {
+    transition: all 0.5s ease;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+#bar {
+    position: relative;
+    top: -100%;
+    left: -20%;
+
+    height: 100%;
+    width: 30%;
+    background-color: coral;
+    z-index: 99;
+
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.slide:hover {
+    transition: all 1.0s cubic-bezier(.49, 1.17, .77, .93) 0.2s;
+    -webkit-transform: translateX(67%);
+    -ms-transform: translateX(67%);
+    transform: translateX(67%);
+}
+
+.buttons {
+
+    height: 15%;
+    width: 100%;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.littleBut {
+    height: 100%;
+    width: 20%;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.littleBut:hover {
+    cursor: pointer;
+}
+
+#content {
+    height: 70%;
+    width: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    height: 96%;
+    width: 40%;
+    background-color: azure;
+
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1%;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10%;
+    padding-left: 5%;
+    padding-right: 2%;
+    padding-bottom: 0.5%;
+    padding-top: 1px;
+}
+
+form .inputText {
+    display: block;
+    width: 90%;
+    height: 75%;
+    background-color: rgb(209, 208, 208);
+    border-width: 0;
+    outline: none;
+    border-radius: 10%;
+    padding-left: 1%;
+
+}
+
+form .inputText:focus {
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .2);
+}
+
+form label,
+span {
+    display: block;
+    height: 75%;
+    width: 100%;
+}
+
+form button {
+    height: 120%;
+    border-width: 0;
+    outline: none;
+    background-color: black;
+    color: white;
+    align-self: flex-end;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+@keyframes swing {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.swing {
+    cursor: default;
+    -webkit-animation: swing 0.6s ease;
+    animation: swing 0.6s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
