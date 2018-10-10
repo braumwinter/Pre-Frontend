@@ -1,0 +1,191 @@
+$wallpaperColor: rgb(218, 209, 209);
+$blockColor: rgb(155, 192, 192);
+
+$format: screen;
+$mobile: 600px;
+$tablet: 800px;
+$desktop: 801px;
+
+@mixin flexContent($justifyCon: center, $alingCon: center) {
+    justify-content: $justifyCon;
+    align-content: $alingCon;
+}
+
+@mixin fontBold($sizeFont: 100%) {
+    font-size: $sizeFont;
+    font-weight: bold;
+}
+
+@mixin Size($sizeHeight: 100%, $sizeWidth: 100%) {
+    height: $sizeHeight;
+    width: $sizeWidth;
+}
+
+@media #{$format} {
+
+    html,
+    body {
+        @media (max-width: $mobile) {
+            @include Size(150%, 100%);
+        }
+
+        @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+            @include Size();
+        }
+
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        @extend div;
+        @extend html;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: flex-start;
+
+        .header {
+            @media (max-width: $mobile) {
+                @include Size(3%, 100%);
+            }
+
+            @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+                @include Size(10%, 100%);
+            }
+
+            background-color: $wallpaperColor;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .logo {
+                @media (max-width: $mobile) {
+                    h1{
+                        font-size: 80%;
+                    }
+                }
+                @include Size(100%, 40%);
+                @include flexContent();
+                background-color: $blockColor;
+            }
+        }
+
+        .menuheader {
+            @media (max-width: $mobile) {
+                @include Size(2%, 100%);
+            }
+
+            @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+                @include Size(8%, 100%);
+            }
+
+            @include flexContent(space-around, center);
+
+            .item {
+                @media (max-width: $mobile) {
+                    @include Size(60%, 15%);
+                    @include fontBold(50%);
+                }
+
+                @media (max-width: $tablet) and (min-width: $mobile + 1px) {
+                    @include Size(60%, 15%);
+                    @include fontBold(60%);
+                }
+
+                @media (min-width: $desktop) and (min-width: $tablet + 1px) {
+                    @include Size(60%, 10%);
+                    @include fontBold(70%);
+                }
+
+                @include Size(60%, 10%);
+                @include flexContent();
+                background-color: $blockColor;
+            }
+        }
+
+        .main {
+            @media (max-width: $mobile) {
+                @include Size(92%, 100%);
+            }
+
+            @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+                @include Size(70%, 100%);
+            }
+
+            background-color: $wallpaperColor;
+
+            .menu {
+                @include Size(100%, 20%);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 1%;
+
+                .menubar {
+                    @media (max-width: $mobile) {
+                        @include Size(1.5%, 100%);
+                    }
+
+                    @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+                        @include Size(8%, 100%);
+                    }
+
+                    @include flexContent(flex-start, center);
+                    @include fontBold();
+                    background-color: $blockColor;
+                    margin-top: 4%;
+                    margin-bottom: 4%;
+                }
+            }
+
+            .content {
+                @include Size(100%, 80%);
+                @include flexContent(space-between, stretch);
+                align-items: stretch;
+
+                .foto {
+                    @media (max-width: $mobile) {
+                        @include Size(15%, 100%);
+                    }
+
+                    @media (max-width: $tablet) and (min-width: $mobile + 1px) {
+                        @include Size(30%, 45%)
+                    }
+
+                    @media (min-width: $desktop) and (min-width: $tablet + 1px) {
+                        @include Size(45%, 30%);
+                    }
+
+                    margin: 1%;
+
+                    img {
+                        @include Size(80%, 100%);
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        font-size: 100%;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            @media (max-width: $mobile) {
+                @include Size(3%, 100%);
+            }
+
+            @media (min-width: $desktop) and (min-width: $mobile + 1px) {
+                @include Size(12%, 100%);
+            }
+
+            @include flexContent();
+            @include fontBold(120%);
+            background-color: $blockColor;
+        }
+    }
+}
