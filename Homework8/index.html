@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+    
+    <!--Навбар-->
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand text-light" href="http://apus.ru/site.xp/049052056055124055051053048.html">
+                    <img src="img/logo.png" width="35" height="35" class="d-inline-block align-top" alt="logo">
+                    these amazing cats
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ссыль</a>
+                        </li>
+                    </ul>
+            </nav>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="что бы Вы хотели найти?">
+
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Поиск</button>
+                </form>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <!--Карусель-->
+
+        <div class="row">
+            <div class="col-4 offset-4">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" ng-class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/1.jpg" alt="First">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/2.jpg" alt="Second">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/3.jpg" alt="Third">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--текст в две колонки-->
+
+        <div class="row m-3 pt-2 pr-1 pl-1">
+            <div class="col-5 bg-light pt-2 pr-1 pl-1">
+                <h2>Факт 1</h2>
+                <p>
+                    «Аппарат мурлыканья» у кошек представляет собой тонко связанные подъязычные косточки,
+                    которые располагаются между основанием черепа и основанием языка.
+                    Сокращение мышц возле голосовых связок вызывает их вибрацию.
+                    Мурлыкающий звук кошка издает ртом и носом, а вибрация распространяется по всему её телу
+                </p>
+                <p>
+                    <a class="btn btn-outline-secondary" href="https://zagge.ru/40-interesnyx-faktov-o-koshkax/" role="button">Источник</a></p>
+            </div>
+
+            <div class="col-5 offset-1 bg-light pt-2 pr-1 pl-1">
+                <h2>Факт 2</h2>
+                <p>
+                    В посольстве Голландии в Москве сотрудники заметили, что двое сиамских кошек время от
+                    времени начинали мяукать и царапать стены здания. Их владельцы, наконец, решили выяснить,
+                    в чём дело, думая, что найдут мышей. Вместо этого они обнаружили скрытые в стенах
+                    микрофоны русских шпионов. Кошки слышали микрофоны, когда они были включены.
+                </p>
+                <p>
+                    <a class="btn btn-outline-secondary" href="https://www.factroom.ru/facts/699" role="button">Источник</a>
+                </p>
+            </div>
+        </div>
+
+        <!--Card-->
+
+        <div class="row">
+            <div class="card-deck border-dark justify-content-between">
+                <div class="card text-center text-light">
+                    <img class="card-img bg-dark" src="img/card.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">Коты-почтальоны</h3>
+                        <p class="card-text">В 1868 году три кота были официально приняты на работу
+                            в лондонскую Службу денежных переводов в качестве мышеловов. Они получали зарплату -
+                            один шиллинг в неделю, который, как правило, тратился на их содержание.
+                            Каждому поступавшему на службу коту давались шесть месяцев испытательного срока.
+                            <br>
+                            Если бы не коты, многие почтовые отправления могли бы не дойти до адресатов.
+                        </p>
+                        <p class="card-footer modal-footer">
+                            <a class="btn btn-outline-light align-items-end" href="https://www.bbc.com/ukrainian/features-russian-42857588"
+                                role="button">Источник</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-center text-light">
+                    <img class="card-img" src="img/card.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">Коты-полицейские</h3>
+                        <p class="card-text">
+                            Летом 2016 года полицейское отделение в городе Дарем приняло на работу кота Миттенс.
+                            Назначение кота на должность в полиции последовало за письмом пятилетней
+                            Элизы Адамсон-Хоппер, которая посчитала, что полиция должна взять в свои ряды кота.
+                            <br>
+                            "Полицейский кот сослужит хорошую службу, так как у него хороший слух, он чует опасность.
+                            Коты очень хорошо знают дорогу домой, и поэтому могут привести полицейских на место",
+                            - написала Элиза.
+                        </p>
+                        <p class="card-footer modal-footer">
+                            <a class="btn btn-outline-light align-items-end" href="https://www.bbc.com/ukrainian/features-russian-42857588"
+                                role="button">Источник</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-center text-light">
+                    <img class="card-img" src="img/card.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">Коты-военные</h3>
+                        <p class="card-text">
+                            Во времена Второй мировой войны на каждом британском корабле
+                            обитал по меньшей мере один кот. Но только кот Саймон получил медаль Марии Дикин -
+                            высшую воинскую награду Великобритании для животных - за помощь в спасении
+                            военно-морских офицеров во время Гражданской войны в Китае в 1949-1950 гг.
+                            <br><br>
+                            Эту награду можно назвать "крестом Виктории" для животных.
+                        </p>
+                        <p class="card-footer modal-footer">
+                            <a class="btn btn-outline-light align-items-end" href="https://www.bbc.com/ukrainian/features-russian-42857588"
+                                role="button">Источник</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--текст с картинками-->
+
+        <div class="row mt-5 bg-light align-items-center">
+            <div class="col-2 offset-1">
+                <img class="d-block w-100" src="img/smart.jpg" alt="smart">
+            </div>
+            <div class="col-7 offset-1">
+                <h5>Умная кошка</h5>
+                <p>
+                    Исследование показало, что событие хранится в памяти собаки около 5 минут.
+                    А кошка помнит на протяжении 16 часов.
+                    <br>
+                    <strong>Кошки предсказывают землетрясения.</strong> Но люди пока не научились понимать их
+                    предсказания.
+                    <br>
+                    <strong>Сколько весит мозг</strong><br>
+                    Мозг кошки весит 32 г, собаки – 100 г<br>
+                    <br>
+                    <strong>Группа крови, как у людей</strong><br>
+                    Кошки имеют группу крови AB, как и люди. Кошка делает 20-40 вдохов в минуту<br>
+                    <br>
+                    Нормальная <strong>температура</strong> кошки – 38,5-39 градусов Цельсия (102 градусов F).<br>
+                    <br>
+                    <strong>Пульс</strong> у кошек прощупывают на заднем бедре в том месте,
+                    где нога соединяется с туловищем. Нормальный пульс у кошки: 110-170 ударов в минуту.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5 bg-light align-items-center">
+            <div class="col-4">
+                <h5>Кошачье зрение</h5>
+                <p>
+                    По отношению к размерам тела у кошки самые большие глаза из всех млекопитающих.
+                    Экспериментально установлено: кошачий глаз способен усиливать световой сигнал в 40–50 раз.
+                    Неудивительно, что в темноте их зрение почти совершенно. Единственный недостаток –
+                    кисы не видят предметов, находящихся прямо напротив морды.
+                    <br>
+                    Кошки <strong> имеют обзор</strong> в 185 градусов, почти как человек (180 градусов).
+                    А вот у собак более широкий обзор, нежели у человека и кошки.
+                    Гончие видят под углом 270 градусов, хотя обычно собаки имеют обзор порядка 250 градусов.
+                    <br>
+                    <strong> Цветовое зрение есть у кошек и отсутствует у собак</strong> Предполагают, что у кошек
+                    цветное зрение
+                    – большая редкость в мире животных. Новейшие исследования показали, что кошки различают синий,
+                    зеленый и красный цвета. А вот собаки цветного зрения не имеют.
+                </p>
+            </div>
+
+            <div class="col-2 offset-1">
+                <img class="d-block w-100" src="img/eyes1.jpg" alt="smart">
+                <img class="d-block w-100" src="img/eyes2.jpg" alt="smart">
+            </div>
+
+            <div class="col-4 offset-1">
+                <h5>Видят ночью</h5>
+                <p>
+                    Глаза кошки способны улавливать и максимально использовать самое слабое световое излучение,
+                    благодаря особенности их строения. Внутренняя поверхность глаза этих животных имеет
+                    блестящий слой, так называемое зеркало, которое отражает падающий свет. Ее глаза, как
+                    и глаза ночных хищных животных не производят свет, а лишь отражают слабые лучи звезд,
+                    Луны, отдаленных источников света, которые попадают внутрь глаза и сосредотачиваются на
+                    их задней поверхности. В конусе света автомобильных фар глаза кошек, застигнутых на улице,
+                    или глаза хищных животных, вышедших на окраину леса, сверкают словно алмазы именно
+                    благодаря этим зеркальцам, которые улавливают любой самый слабый свет и фокусируют их
+                    затем на высокочувствительные фоторецепторы, усиливая действие светового импульса. <br>
+                </p>
+            </div>
+        </div>
+
+        <!--коллапсы-->
+
+        <div class="row mt-5 bg-light">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Гибкая и прыгучая
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>
+                                У кошки нет ключицы, поэтому она может пролезть в любую щель при условии,
+                                что в нее протиснется голова. <br>
+                                <br>
+                                Прыжок кошки в высоту превышает в семь раз длину ее хвоста и в 5 раз превышает ее рост.<br>
+                                <br>
+                                Когда кошка прыгает, мягкие подушечки ее ног глушат звук приземления. <br>
+                                <br>
+                                Когда домашняя кошка ловит мышь, она добивается успеха в одном случае из трех. <br>
+                                <br>
+                                Когда кошка приносит свою добычу хозяину, она приносит ему подарок, как своим котятам,
+                                которых она учит охотиться. Нужно похвалить кошку, взять ее добычу и незаметно выкинуть
+                                ее.<br>
+                                <br>
+                                Кошки не всегда падают на четыре лапы мнение о том, что кошки всегда приземляются на
+                                лапы –
+                                ошибочно. При падении с высоты кошки ломают кости, как и люди. <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Почему кошки могут быть трехцветными, а коты нет
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>
+                                Ген, отвечающий за оранжевый цвет, связан с половой хромосомой X.
+                                Этот ген дает черный или рыжий в окрасе. Самка с двумя X хромосомами может быть рыжей
+                                и черной, а самец с одной X хромосомой - или черным или рыжим. Если самец рождается
+                                черно-рыжим, значит, он стерилен. <br>
+                                <br>
+                                <strong>Кошки с белой шерстью очень восприимчивы к загару</strong>
+                                … поэтому долгое пребывание на солнце для них грозит заболеванием кожи (рак кожи).
+                                Поэтому в солнечный день белых кошек не выпускают на улицу. <br>
+                                <br>
+                                <strong> У сиамцев темнеют прохладные участки</strong>
+                                У сиамских кошек окрашенные части тела более прохладные. Сиамские котята рождаются
+                                белыми, поскольку в утробе матери поддерживается постоянная температура. А потом
+                                более прохладные части тела темнеют. <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Коты мурлыкают для хозяев в корыстных целях
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>
+                                О том, что одомашнивание меняет modus vivendi (образ жизни) животного, было известно
+                                давно. К примеру, есть данные о том, что собаки способны отследить направление взгляда
+                                хозяина, а лошади способны почувствовать малейшие движения мышц всадника или
+                                отреагировать на жест. Домашние коты умеют манипулировать вниманием человека и
+                                чётко дифференцируют звуки, выражающие приятные ощущения, и звуки, привлекающие
+                                внимание. В эксперименте участвовали 12 домашних котов, которые предоставили около
+                                ста различных звуков: мяуканье голодного кота, кота, сопротивляющегося расчесыванию,
+                                урчащего, шипящего кота и так далее. Люди-волонтёры классифицировали звуки по степени
+                                выраженного в нём удовольствия или агрессивности. Выяснилось, что коты информируют
+                                нас относительно своих намерений с целью привлечь наше внимание. Осознанное
+                                "переключение" с жёсткого "мааао!" на мягкое "мяу", изменённый звуковой диапазон
+                                очень просто объяснить необходимостью котов в "налаживании контакта" с человеком —
+                                самый что ни на есть естественный отбор и адаптация с целью выживания.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--форма для отзыва-->
+
+        <div class="row mt-5 pt-5 bg-light">
+            <div class="col-10 offset-1">
+                <form>
+
+                    <label for="Form" class="col-4 offset-5 col-form-label-lg">Ваше мнение</label>
+
+                    <div class="form-group row">
+                        <label for="inputName" class="col-2 col-form-label">Имя</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="Представтесь">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-2 col-form-label">Email</label>
+                        <div class="col-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Ваш Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputMessage" class="col-2 col-form-label">Сообщение</label>
+                        <div class="col-10">
+                            <textarea class="form-control" name="message" rows="3" placeholder="расскажите о Ваших котиках)"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-10">
+                            <button type="submit" class="btn btn-secondary">Поделиться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="container mt-5 bg-light">
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+            <div class="container text-center text-md-left">
+
+                <div class="row">
+                    <div class="col-4 mr-auto mt-4 mb-1">
+
+                        <h5 class="font-weight-bold text-uppercase mb-4">Здравствйте, я - Футер</h5>
+                        <p>футер, он же подвал сайта – это блок в нижней части страницы, куда выносят полезную,
+                            но не первостепенную информацию.</p>
+                        <p>Как примеры можно привести:
+                            <ul>
+                                <li>Данные о копирайте</li>
+                                <li>Карта сайта</li>
+                                <li>Дублирование основных пунктов навигации</li>
+                                <li>Облако основных тегов сайта</li>
+                                <li>Название команд или компаний, которые разрабатывали сайт, со ссылкой на их
+                                    контактные данные или их страницу в интернете</li>
+                                <li>И т.п.</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <div class="col-3 mx-auto mt-4 mb-1">
+
+                        <h5 class="font-weight-bold text-uppercase mb-4">тоже про меня)</h5>
+                        <p>
+                            Не стоит перегружать футер лишними данными – большинство пользователей, скорее всего, не
+                            обратит на них внимания, а поисковые системы могут расценить это как методы черного
+                            продвижения и применить к сайту санкции, убрав его из поисковой выдачи. Основные традиции
+                            по заполнению футера уже сложились, и большинство пользователей привыкло видеть там
+                            перечисленные выше пункты; не стоит их разочаровывать.
+                        </p>
+                    </div>
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <div class="col-3 mt-4 mb-1 text-center">
+                        <h5 class="text-uppercase">См. также</h5>
+                        <br>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://seopult.ru/library/Footer">Footer</a>
+                            </li>
+                            <li>
+                                <a href="https://seopult.ru/library/Body">Body</a>
+                            </li>
+                            <li>
+                                <a href="https://seopult.ru/library/Header">Header</a>
+                            </li>
+                            <li>
+                                <a href="https://seopult.ru/library/HTML">HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+                        <h5 class="text-uppercase">Icon</h5>
+                        <br>
+                        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                            is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                                target="_blank">CC 3.0 BY</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright text-center py-3">
+                <hr> © 2018 Copyright: <a href="#">###</a>
+                <hr>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

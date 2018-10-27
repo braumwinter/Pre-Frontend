@@ -1,0 +1,10 @@
+body {
+    background-image: url('../img/wall.jpg');
+    background-attachment: fixed;
+}
+
+hr {
+    border: none;
+    background-color: grey;
+    height: 2px;
+}
