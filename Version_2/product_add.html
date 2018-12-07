@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>добавить товар</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="ico.png" type="image/png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/source.js"></script>
+    <script>
+        window.onload = function(){
+                FormEnterObjectHidden()
+            }
+        </script>
+</head>
+
+<body>
+    <!--Контейнер-->
+    <div class="container">
+        <!--header-->
+        <div id="header" class="row d-flex justify-content-between align-items-center py-3 mb-4">
+            <div class="col-lg-8 col-md-8 col-sm-10 d-flex justify-content-between align-items-center">
+                <div>
+                    <button id="code_admin_button" type="button" class="btn btn-primary btn-lg" onclick="location.href = 'management_menu.html'">Управление
+                        товарами</button>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-2 col-12 d-flex justify-content-end">
+                <button id="code_admin_button" type="button" class="btn btn-primary btn-lg" onclick="ExitAdmin()">Выход</button>
+            </div>
+        </div>
+        <div id="header" class="row d-flex justify-content-center align-items-center py-3 mb-4">
+            <h1>Добавить товар</h1>
+        </div>
+
+        <!--content-->
+        <!--выбор категории-->
+        <div class="row my-5">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="m-3">
+                    <button id="code_admin_button" type="button" class="btn btn-primary btn-lg px-5 my-2" onclick="ShowEnterWeapon()">Оружие</button>
+                </div>
+                <div class="m-3">
+                    <button id="code_admin_button" type="button" class="btn btn-primary btn-lg px-5 my-2" onclick="ShowEnterArmor()">Броня</button>
+                </div>
+                <div class="m-3">
+                    <button id="code_admin_button" type="button" class="btn btn-primary btn-lg px-5 my-2" onclick="ShowEnterSpell()">Свитки</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- общая форма -->
+        <div id="EnterOject" class="row py-2">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <form>
+                    <div class="form-group row justify-content-center my-3">
+                        <label>
+                            <h2 id="NameFormEnterOject"></h2>
+                        </label>
+                    </div>
+
+                    <!-- имя объекта -->
+                    <div class="form-group row my-3">
+                        <label id="LabelNameEnterOject" for="NameEnterOject" class="col-form-label col-form-label-lg pl-3">
+                            Название
+                        </label>
+                        <input type="text" class="form-control form-control-lg" id="NameEnterOject" placeholder="Название"
+                            required>
+                    </div>
+
+                    <!-- главное фото -->
+                    <div class="form-group row my-3">
+                        <label class="col-form-label col-form-label-lg pl-3">Главное фото</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="MainFotoEnterOject" required>
+                                <label class="custom-file-label" for="MainFotoEnterOject">Выбрать файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- два остальных фото -->
+                    <div class="form-group row my-3">
+                        <label class="col-form-label col-form-label-lg pl-3">Ещё два фото для презентации</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="SecondFotoEnterOject" required>
+                                <label class="custom-file-label" for="SecondFotoEnterOject">Выбрать файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                            </div>
+                        </div>
+                        <div class="input-group mt-2">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="ThirdFotoEnterOject" required>
+                                <label class="custom-file-label" for="ThirdFotoEnterOject">Выбрать файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- цена -->
+                    <div class="form-group row my-3">
+                        <div class="form-group col-md-6 col-12">
+                            <label for="CostEnterOject" class=" col-form-label-lg pl-3">Цена</label>
+                            <input type="number" class="form-control form-control-lg" id="CostEnterOject" placeholder="Цена"
+                                required>
+                        </div>
+
+                        <!-- количество -->
+                        <div class="form-group col-md-6 col-12">
+                            <label for="QuantityEnterOject" class=" col-form-label-lg pl-3">Колическтво</label>
+                            <input type="number" class="form-control form-control-lg" id="QuantityEnterOject"
+                                placeholder="Количество" required>
+                        </div>
+                    </div>
+
+                    <!-- происхождение -->
+                    <div class="form-group row my-3">
+                        <label for="OriginEnterOject" class="col-form-label col-form-label-lg pl-3">Происхождение</label>
+                        <input type="text" class="form-control form-control-lg" id="OriginEnterOject" placeholder="Происхождение">
+                    </div>
+
+                    <!-- тип артефакта -->
+                    <div class="form-group row my-3">
+                        <label for="TypeArtifactEnterOject" class="col-form-label col-form-label-lg pl-3">Тип артефакта</label>
+                        <select class="form-control form-control-lg" id="TypeArtifactEnterOject">
+                            <option>боевой</option>
+                            <option>усиливающий</option>
+                            <option>защитный</option>
+                            <option>специальный</option>
+                            <option>магический</option>
+                            <option>заклинание</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group row my-3">
+                        <label for="FormArtifactEnterOject" class="col-form-label col-form-label-lg pl-3">Форма
+                            артефакта</label>
+                        <select class="form-control form-control-lg" id="FormArtifactEnterOject">
+                        </select>
+                    </div>
+
+                    <div class="form-group row my-3">
+                        <label for="EffectEnterOject" class="col-form-label col-form-label-lg pl-3">Эффекты</label>
+                        <input type="text" class="form-control form-control-lg" id="EffectEnterOject" aria-describedby="EffectHelp"
+                            placeholder="Эффекты" required>
+                        <label id="EffectHelp" class="form-text col-form-label-lg text-muted"></label>
+                    </div>
+
+                    <div class="form-group row my-3">
+                        <label for="DescriptionEnterOject" class="col-form-label col-form-label-lg pl-3">Описание</label>
+                        <textarea type="text" class="form-control form-control-lg" rows="3" id="DescriptionEnterOject"
+                            placeholder="Описание"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- форма для Оружия -->
+        <div id="EnterWeapon" class="row py-2">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <form>
+
+                    <!-- длина клинка -->
+                    <div class="form-group row my-3">
+                        <label id="LabelBladeLength" for="BladeLength" class="col-form-label col-form-label-lg pl-3">Длина
+                            клинка</label>
+                        <input type="number" class="form-control form-control-lg" id="BladeLength" placeholder="Длина клинка"
+                            required>
+                    </div>
+
+                    <!-- тип использования -->
+                    <div class="form-group row my-3">
+                        <label id="LabelTypeUseWeapon" for="TypeUseWeapon" class="col-form-label col-form-label-lg pl-3">Тип
+                            использования</label>
+                        <select class="form-control form-control-lg" id="TypeUseWeapon">
+                            <option>рубящий</option>
+                            <option>рубяще-колющий</option>
+                            <option>колющий</option>
+                            <option>магический</option>
+                            <option>психологический</option>
+                            <option>ударный</option>
+                        </select>
+                    </div>
+
+                    <!-- вес -->
+                    <div class="form-group row my-3">
+                        <label id="LabelWeightWeapon" for="WeightWeapon" class="col-form-label col-form-label-lg pl-3">Вес</label>
+                        <input type="number" class="form-control form-control-lg" id="WeightWeapon" placeholder="Вес"
+                            required>
+                    </div>
+
+                    <!-- пользователи -->
+                    <div class="form-group row my-3">
+                        <label id="LabelUsersWeapon" for="UsersWeapon" class="col-form-label col-form-label-lg pl-3">Известные
+                            пользователи</label>
+                        <textarea type="text" class="form-control form-control-lg" rows="2" id="UsersWeapon"
+                            placeholder="Известные пользователи"></textarea>
+                    </div>
+
+                    <!-- кнопки -->
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div>
+                            <button id="some_button_admin" type="submit" class="btn btn-lg" onclick="AddProduct()">Добавить</button>
+                        </div>
+                        <div>
+                            <button id="some_button_admin" type="button" class="btn btn-lg" onclick="FormEnterObjectHidden()">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- форма для Брони -->
+        <div id="EnterArmor" class="row py-2">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <form>
+                    <!-- категория -->
+                    <div class="form-group row my-3">
+                        <label id="LabelCategoryArmor" for="CategoryArmor" class="col-form-label col-form-label-lg pl-3">категория</label>
+                        <select class="form-control form-control-lg" id="CategoryArmor">
+                            <option>торс</option>
+                            <option>шлем</option>
+                            <option>поножи</option>
+                            <option>перчатки</option>
+                            <option>щит</option>
+                            <option>пояс</option>
+                            <option>обувь</option>
+                        </select>
+                    </div>
+
+                    <!-- вес -->
+                    <div class="form-group row my-3">
+                        <label id="LabelWeightArmor" for="WeightArmor" class="col-form-label col-form-label-lg pl-3">Вес</label>
+                        <input type="number" class="form-control form-control-lg" id="WeightArmor" placeholder="Вес"
+                            required>
+                    </div>
+
+                    <!-- пользователи -->
+                    <div class="form-group row my-3">
+                        <label id="LabelUsersArmor" for="UsersArmor" class="col-form-label col-form-label-lg pl-3">Известные
+                            пользователи</label>
+                        <textarea type="text" class="form-control form-control-lg" id="UsersArmor" rows="3" placeholder="Известные пользователи"></textarea>
+                    </div>
+
+                    <!-- кнопки -->
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div>
+                            <button id="some_button_admin" type="submit" class="btn btn-lg" onclick="AddProduct()">Добавить</button>
+                        </div>
+                        <div>
+                            <button id="some_button_admin" type="button" class="btn btn-lg" onclick="FormEnterObjectHidden()">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- форма для Свитков -->
+        <div id="EnterSpell" class="row py-2">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                <form>
+                    <!-- тип магии -->
+                    <div class="form-group row my-3">
+                        <label id="LabelTypeMagic" for="TypeMagic" class="col-form-label col-form-label-lg pl-3">Тип
+                            магии</label>
+                        <select class="form-control form-control-lg" id="TypeMagic">
+                            <option>воды</option>
+                            <option>воздуха</option>
+                            <option>земли</option>
+                            <option>огня</option>
+                        </select>
+                    </div>
+
+                    <!-- уровень -->
+                    <div class="form-group row my-3">
+                        <label id="LabelLevelMagic" for="LevelMagic" class="col-form-label col-form-label-lg pl-3">Уровень</label>
+                        <select class="form-control form-control-lg" id="LevelMagic">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <!-- тип воздействия -->
+                    <div class="form-group row my-3">
+                        <label id="LabelImpactType" for="ImpactType" class="col-form-label col-form-label-lg pl-3">Тип
+                            воздействия</label>
+                        <select class="form-control form-control-lg" id="LevelMagic">
+                            <option>защитный</option>
+                            <option>ловушка</option>
+                            <option>атакующий</option>
+                            <option>усиление</option>
+                        </select>
+                    </div>
+
+                    <!-- кнопки -->
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div>
+                            <button id="some_button_admin" type="submit" class="btn btn-lg" onclick="AddProduct()">Добавить</button>
+                        </div>
+                        <div>
+                            <button id="some_button_admin" type="button" class="btn btn-lg" onclick="FormEnterObjectHidden()">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

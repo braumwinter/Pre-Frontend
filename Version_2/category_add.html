@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>добавить категории</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="ico.png" type="image/png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/source.js"></script>
+</head>
+
+<body>
+    <!--Контейнер-->
+    <div id="ContainerCateg" class="container">
+        <!--header-->
+        <div id="header" class="row d-flex justify-content-between align-items-center py-3 mb-4">
+            <div class="col-lg-8 col-md-8 col-sm-10 d-flex justify-content-between align-items-center">
+                <div>
+                    <button id="code_admin_button" type="button" class="btn btn-primary btn-lg" onclick="location.href = 'management_menu.html'">Управление
+                        товарами</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-2 col-12 d-flex justify-content-end">
+                <button id="code_admin_button" type="button" class="btn btn-primary btn-lg" onclick="ExitAdmin()">Выход</button>
+            </div>
+        </div>
+        <div id="header" class="row d-flex justify-content-center align-items-center py-3 mb-4">
+            <h1>добавить категории</h1>
+        </div>
+
+        <!--content-->
+        <!-- ввод новой категории -->
+        <div class="row">
+            <div class="col-12">
+                <div class="input-group input-group-lg mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg_card" id="basic-addon1">добавить новую категорию</span>
+                    </div>
+                    <input id="NameNewCat" type="text" class="form-control form-control-lg" placeholder="название категории">
+                    <div class="input-group-append">
+                        <button id="some_button_admin" class="btn btn-lg" type="button" onclick="AddCategory()">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- оружие -->
+        <div class="row my-3">
+            <hr>
+            <!-- кнопка -->
+            <div class="col-lg-5 col-md-4 col-sm-12 col-12 my-auto mx-auto text-center">
+                <div class="row">
+                    <div class="col-12 my-2">
+                        <button id="some_button_admin" class="btn btn-lg">сохранить<br>Оружие</button>
+                    </div>
+                    <div class="col-12 my-2">
+                        <div class="input-group input-group-lg">
+                            <input id="CatWeaponName" type="text" class="form-control form-control-lg" placeholder="название группы">
+                            <div class="input-group-append">
+                                <button id="some_button_cat" class="btn btn-lg" onclick="AddSubcategory('weapon')">добавить
+                                    группу</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- поле ввода -->
+            <div id="CatWeapon" class="col-lg-7 col-md-8 col-sm-12 col-12 m-auto p-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center">форма артефакта</h3>
+                        <div class="input-group">
+                            <textarea class="form-control form-control-lg" rows="7">
+                        меч
+                        копье
+                        трезубец
+                        прочее
+                        </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- доспехи -->
+        <div class="row my-3">
+            <hr>
+            <!-- кнопка -->
+            <div class="col-lg-5 col-md-4 col-sm-12 col-12 my-auto mx-auto text-center">
+                <div class="row">
+                    <div class="col-12 my-2">
+                        <button id="some_button_admin" class="btn btn-lg">сохранить<br>Доспехи</button>
+                    </div>
+                    <div class="col-12 my-2">
+                        <div class="input-group input-group-lg">
+                            <input id="CatArmorName" type="text" class="form-control form-control-lg" placeholder="название группы">
+                            <div class="input-group-append">
+                                <button id="some_button_cat" class="btn btn-lg" onclick="AddSubcategory('armor')">добавить
+                                    группу</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- поле ввода -->
+            <div id="CatArmor" class="col-lg-7 col-md-8 col-sm-12 col-12 m-auto p-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center">категория артефакта</h3>
+                        <div class="input-group">
+                            <textarea class="form-control form-control-lg" rows="7">
+                            торс
+                            шлем
+                            поножи
+                            перчатки
+                            щит
+                            пояс
+                            обувь
+                        </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- свитки -->
+        <div class="row my-3">
+            <hr>
+            <!-- кнопка -->
+            <div class="col-lg-5 col-md-4 col-sm-12 col-12 my-auto mx-auto text-center">
+                <div class="row">
+                    <div class="col-12 my-2">
+                        <button id="some_button_admin" class="btn btn-lg">сохранить<br>Свитки</button>
+                    </div>
+                    <div class="col-12 my-2">
+                        <div class="input-group input-group-lg">
+                            <input id="CatSpellName" type="text" class="form-control form-control-lg" placeholder="название группы">
+                            <div class="input-group-append">
+                                <button id="some_button_cat" class="btn btn-lg" onclick="AddSubcategory('spell')">добавить
+                                    группу</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- поле ввода -->
+            <div id="CatSpell" class="col-lg-7 col-md-8 col-sm-12 col-12 m-auto p-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center">тип магии</h3>
+                        <div class="input-group">
+                            <textarea class="form-control form-control-lg" rows="7">
+                            земли
+                            воды
+                            огня
+                            воздуха
+                        </textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center">тип воздействия</h3>
+                        <div class="input-group">
+                            <textarea class="form-control form-control-lg" rows="7">
+                                защитный
+                                атакующий
+                                усиливающий
+                                ловушка
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

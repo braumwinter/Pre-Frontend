@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>авторизация администратора</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="ico.png" type="image/png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/source.js"></script>
+    <script>
+        window.onload = function(){
+            document.getElementById('send_code_button').removeAttribute('disabled');
+            document.getElementById('code_admin').setAttribute('disabled','');
+            document.getElementById('code_admin_button').setAttribute('disabled','');
+        }
+    </script>
+</head>
+
+<body>
+    <!--Контейнер-->
+    <div class="container">
+        <!--header-->
+        <div id="header" class="row d-flex justify-content-between align-items-center py-3 mb-4">
+            <div class="col-12 d-flex justify-content-end">
+                <button id="some_button_admin" type="button" class="btn btn-primary btn-lg" onclick="ExitAdmin()">
+                    Выход
+                </button>
+            </div>
+        </div>
+
+        <div id="header" class="row d-flex justify-content-center align-items-center py-3 mb-4">
+            <h1>Авторизация Администратора</h1>
+        </div>
+
+        <!--content-->
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-10 offset-md-1 col-12 my-5">
+                <form>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg pl-3">Логин</label>
+                        <input type="text" class="form-control form-control-lg" id="login_admin" placeholder="Ваш логин">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_admin" class="col-form-label-lg pl-3">Пароль</label>
+                        <input type="password" class="form-control form-control-lg" id="password_admin" placeholder="Пароль">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="send_code_button" type="button" class="btn btn-lg" onclick="Code()">выслать код</button>
+                    </div>
+                    <div class="form-group">
+                        <label id="label_code_admin" for="code_admin" class="col-form-label-lg pl-3">Код</label>
+                        <input type="text" class="form-control form-control-lg" id="code_admin" placeholder="Код">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="code_admin_button" type="button" class="btn btn-lg" onclick="CheckCode()">
+                            Войти
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
