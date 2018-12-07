@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>регистрация нового сотрудника</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="ico.png" type="image/png">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/source.js"></script>
+</head>
+
+<body>
+    <!--Контейнер-->
+    <div class="container">
+        <!--header-->
+        <div id="header" class="row d-flex justify-content-between align-items-center py-3 mb-4">
+            <div class="col-7 d-flex justify-content-start">
+                <button id="some_button_admin" type="button" class="btn btn-primary btn-lg my-2" onclick="location.href = 'management_menu.html'">
+                    Управление товарами
+                </button>
+            </div>
+
+            <div class="col-5 d-flex justify-content-end">
+                <button id="some_button_admin" type="button" class="btn btn-primary btn-lg" onclick="ExitAdmin()">
+                    Выход
+                </button>
+            </div>
+        </div>
+
+        <!-- название страницы -->
+        <div id="header" class="row d-flex justify-content-center align-items-center py-3 mb-4">
+            <h1>Регистрация нового сотрудника</h1>
+        </div>
+
+        <!--content-->
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-10 offset-md-1 col-12 my-5">
+                <form>
+                    <div class="text-center bg-danger text-light">
+                        <label class="col-form-label-lg">
+                            <h2> Все поля обязательны!</h2>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">Логин</label>
+                        <input type="text" class="form-control form-control-lg" id="login_admin" placeholder="Логин"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">Имя</label>
+                        <input type="text" class="form-control form-control-lg" id="login_admin" placeholder="Имя"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">Фамилия</label>
+                        <input type="text" class="form-control form-control-lg" id="login_admin" placeholder="Фамилия"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">E-mail</label>
+                        <input type="email" class="form-control form-control-lg" id="login_admin" placeholder="E-mail"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">Телефон</label>
+                        <input type="tel" class="form-control form-control-lg" id="login_admin" aria-describedby="telHelp"
+                            placeholder="777 77 777 77 77" pattern="[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}"
+                            required>
+                        <label id="telHelp" class="form-text col-form-label-lg text-muted">в формате 777 77 777 77 77
+                            (через пробел)</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="login_admin" class="col-form-label-lg">Должность</label>
+                        <input type="text" class="form-control form-control-lg" id="login_admin" placeholder="Должность"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_admin" class="col-form-label-lg">Пароль</label>
+                        <input type="password" class="form-control form-control-lg" id="password_admin" placeholder="Пароль"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_admin" class="col-form-label-lg">Повторить пароль</label>
+                        <input type="password" class="form-control form-control-lg" id="password_admin" placeholder="Пароль"
+                            required>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="send_code_button" type="submit" class="btn btn-lg" onclick="location.href = 'management_menu.html'">зарегистрировать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
