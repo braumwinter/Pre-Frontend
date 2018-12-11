@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    font-size: 10px;
 }
 
 div {
@@ -58,11 +59,11 @@ h6,
 p {
     margin-left: 10%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 130%;
+    font-size: 1.5rem;
 }
 
 h1 {
-    font-size: 200%;
+    font-size: 2rem;
     text-decoration-line: underline;
     color: rgb(7, 27, 4);
 }
