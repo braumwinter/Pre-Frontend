@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0px;
     padding: 0px;
+    font-size: 10px;
 }
 
 .conteiner {
@@ -60,7 +61,6 @@ div.text {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     width: 100%;
 }
 
@@ -90,11 +90,11 @@ h6,
 p {
     margin-left: 10%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 150%;
+    font-size: 1.5rem;
 }
 
 h1 {
-    font-size: 250%;
+    font-size: 2.5rem;
     text-decoration-line: underline;
     color: rgb(7, 27, 4);
 }
