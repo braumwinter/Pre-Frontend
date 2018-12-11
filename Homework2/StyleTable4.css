@@ -93,6 +93,8 @@ div.content {
     border-right: 1%;
     border-right-color: blueviolet;
     border-right-style: solid;
+    overflow: auto;
+    padding-bottom: 15%;
 }
 
 table {
