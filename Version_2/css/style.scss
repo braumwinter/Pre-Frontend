@@ -175,7 +175,7 @@ p,
     font-size: 2rem;
 }
 
-/*==========эффекты пр инаведении==========*/
+/*==========эффекты при инаведении==========*/
 /*иконки в хедере и футере и кнопки навигации, и администрирования*/
 #menu_icon_img:hover,
 #all_button:hover,
@@ -218,6 +218,20 @@ p,
 #registration_button:hover,
 #AdminButton:hover {
     border: solid 1px $info-border;
+}
+
+/*карточки товаров*/
+.card-img-top{
+    overflow:hidden;
+    transition: all 1s ease-out;
+    z-index:1000;
+}
+
+.card-img-top:hover{
+    transform: scale(1.5);
+    border: 1px solid gray;
+    box-shadow:0px 0px 20px gray;
+    z-index:1001; 
 }
 
 /*==========эффекты при нажатии/активации==========*/
@@ -384,6 +398,7 @@ ul {
     width: 100%;
     padding: 1rem;
     white-space: normal;
+    word-wrap: break-word;
 }
 
 #arrow {
@@ -407,6 +422,11 @@ ul {
 /*стиль для карт*/
 #main_info {
     padding: 1.5rem;
+}
+
+/*карточки*/
+#infoCardX {
+    padding: 0px 10px;
 }
 
 /*стиль ссылок в футере*/
@@ -483,6 +503,10 @@ hr {
     width: 100%;
 }
 
+#Bg_category{
+    margin: 0.6rem 0rem;
+}
+
 /*====================АДАПТАЦИЯ====================*/
 @media(min-width: 768px) and (max-width: 1199px) {
     #header_enter_buttons {
@@ -555,6 +579,7 @@ hr {
     #spell_button {
         padding: 2rem 0rem;
         height: 100%;
+        font-size: 1.5rem;
     }
 
     #header_enter_buttons {
@@ -589,5 +614,13 @@ hr {
     #header_enter_buttons {
         margin: 0rem 0rem 2rem 0rem;
         padding: 0rem 0rem 2rem 0rem;
+    }
+
+    #all_button,
+    #weapons_button,
+    #armor_button,
+    #spell_button,
+     {
+        font-size: 1rem;
     }
 }
